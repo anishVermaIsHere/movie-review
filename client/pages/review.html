@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../js/review.js" type="module" defer></script>
+    <title>Movie Review | Movie App</title>
+  </head>
+  <body>
+    <header class="">
+      <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Movies</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+            </ul>
+            <form id="searchForm" class="d-flex" role="search">
+              <input class="form-control me-2" id="search" type="search" placeholder="Search movies..." aria-label="Search">
+              <button class="btn" type="submit" style="background: rgb(183, 206, 241);">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+        <h3 class="">Movie Review</h3>
+        <hr/>
+      <section class="row my-5" id="row">
+        <div id="alert-modal"></div>
+        <div class="col-lg-6 col-12">
+            <div id="movie-detail">
+                <h4 id="movie-title" class="text-primary mb-4"></h4>
+            </div>
+            <form id="review-form" method="POST">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="review-username" placeholder="DavidPaul">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review</label>
+                    <textarea class="form-control" id="review-description" rows="3" placeholder="Type your reviews..."></textarea>
+                </div>
+
+                <div class="">
+                    <button type="submit" id="post" class="btn btn-success px-4 py-1" title="post review">Post</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-lg-6 col-12">
+            <h4>All reviews</h4>
+            <hr/>
+            
+            <div id="reviews-section">
+               <!-- ... -->
+            </div>
+
+        </div>
+
+      </section>
+    </main>
+  </body>
+</html>
